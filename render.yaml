@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    buildCommand: poetry install --no-dev
+    startCommand: poetry run python бот.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
