@@ -1,8 +1,43 @@
-api_id = '30471099'
-api_hash = '5ca916cf23ca4b9c2bde4893a612c700'
-bot_token = '8532334445:AAHO8BlaKYkNWWJjvgQIxviniPko2dFj7EA'
-admin_chat_ids = ['6934998718','8304483534']  # Добавьте сюда ID всех администраторов 'id', 'id' и тд
-CRYPTO_PAY_TOKEN = '514857:AAw4bj36NyFlvyLg0242Nuva1Hn4RlFank4' # тут замените на свой api от бота @send
+import os
+
+# === СЕКРЕТНЫЕ ДАННЫЕ (из переменных окружения) ===
+# ВНИМАНИЕ: Никогда не вставляйте реальные значения здесь!
+# Render/Heroku будут использовать свои переменные окружения
+# Для локального тестирования можно указать тестовые значения
+
+# Для продакшена (Render) - читаем из переменных окружения
+# Для разработки - можно указать тестовые значения
+api_id = int(os.getenv('API_ID', '0'))  # 0 для теста
+api_hash = os.getenv('API_HASH', 'test_hash_for_development')
+bot_token = os.getenv('BOT_TOKEN', '0:test_token_for_dev')
+CRYPTO_PAY_TOKEN = os.getenv('CRYPTO_PAY_TOKEN', '0:test_crypto_token')
+
+# ID администраторов
+admin_ids_str = os.getenv('ADMIN_CHAT_IDS', '0')
+admin_chat_ids = [id_.strip() for id_ in admin_ids_str.split(',') if id_.strip()]
+
+# === БЕЗОПАСНЫЕ ДАННЫЕ (можно оставить) ===
+# Эти данные не секретные, их можно оставить в коде
+receivers = [
+    'abuse@telegram.org',
+    'recover@telegram.org',
+    'dmca@telegram.org'
+]
+
+smtp_servers = {
+    'gmail.com': ('smtp.gmail.com', 587),
+    'mail.ru': ('smtp.mail.ru', 465),
+    'yandex.ru': ('smtp.yandex.ru', 465),
+}
+
+# Для тестирования SMTP - используйте тестовые данные
+# НЕ ЗАГРУЖАЙТЕ РЕАЛЬНЫЕ ПАРОЛИ В GITHUB!
+senders = {
+    'test@gmail.com': 'test_app_password_here',
+}
+
+mail = ['test@example.com']
+phone_numbers = ['+79123456789']
 
 senders = {
     "huyznaet06@gmail.com": "cyeb pnyi ctpj xxdx",
