@@ -1,6 +1,7 @@
-# requirements.txt - ИСПРАВЛЕННАЯ ВЕРСИЯ
+# requirements.txt - УНИВЕРСАЛЬНЫЙ ВАРИАНТ
 aiogram==2.25.1
 telethon==1.34.0
 aiohttp==3.9.1
 python-dotenv==1.0.0
-aiocrypto==1.0.0  # или другая версия
+python-telegram-bot==20.7  # если используете другой клиент
+cryptocompare==0.7.3        # для работы с криптой
