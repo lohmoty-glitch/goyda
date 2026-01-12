@@ -1,17 +1,44 @@
-# config.example.py
-# Копируйте этот файл в config.py и заполните значениями для локальной разработки.
-# НИКОГДА не коммитьте заполненный config.py!
+# config.py - ДЛЯ ПРОДАКШЕНА (Render)
+import os
 
-# Секреты из окружения (значения по умолчанию для разработки)
-API_ID = "ваш_api_id_здесь"
-API_HASH = "ваш_api_hash_здесь"
-BOT_TOKEN = "ваш_bot_token_здесь"
-CRYPTO_PAY_TOKEN = "ваш_crypto_pay_token_здесь"
-ADMIN_CHAT_IDS = "id_админа1, id_админа2"  # Через запятую, без пробелов
+# === СЕКРЕТНЫЕ ДАННЫЕ (из переменных окружения) ===
+# Эти значения берутся из переменных окружения на Render
+# Для локальной разработки можно указать значения по умолчанию
 
-# Безопасные данные (оставьте как есть или измените)
-receivers = ['abuse@telegram.org']
-smtp_servers = {'gmail.com': ('smtp.gmail.com', 587)}
+API_ID = int(os.getenv('API_ID', '30471099'))  # значение по умолчанию для локальной разработки
+API_HASH = os.getenv('API_HASH', '5ca916cf23ca4b9c2bde4893a612c700')
+BOT_TOKEN = os.getenv('BOT_TOKEN', '8532334445:AAHO8BlaKYkNWWJjvgQIxviniPko2dFj7EA')
+CRYPTO_PAY_TOKEN = os.getenv('CRYPTO_PAY_TOKEN', '514857:AAw4bj36NyFlvyLg0242Nuva1Hn4RlFank4')
+
+# ID администраторов (через запятую)
+ADMIN_CHAT_IDS = os.getenv('ADMIN_CHAT_IDS', '6934998718,8304483534')
+
+# Преобразование строки с ID в список чисел
+admin_chat_ids = [int(id_.strip()) for id_ in ADMIN_CHAT_IDS.split(',') if id_.strip()]
+
+# === БЕЗОПАСНЫЕ ДАННЫЕ (можно оставить в коде) ===
+# Эти данные не секретные
+
+senders = {
+    "huyznaet06@gmail.com": "cyeb pnyi ctpj xxdx",
+    "alabuga793@gmail.com": "tzuk rehw syaw ozme",
+    # ... остальные данные
+}
+
+receivers = [
+    'sms@telegram.org', 'dmca@telegram.org', 'abuse@telegram.org', 
+    # ... остальные данные
+]
+
+smtp_servers = {
+    "gmail.com": ("smtp.gmail.com", 587),
+    "yandex.ru": ("smtp.yandex.ru", 465),
+    # ... остальные данные
+}
+
+# Дополнительные переменные (если используются в боте)
+mail = ['test@example.com']  # или другие почты
+phone_numbers = ['+79123456789']  # или другие номера
 
 
 senders = {
