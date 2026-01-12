@@ -1,0 +1,178 @@
+# ====================================
+# СЕКРЕТНЫЕ ФАЙЛЫ И КОНФИГУРАЦИИ
+# ====================================
+
+# Основной конфиг с ключами
+config.py
+config.local.py
+
+# Файлы окружения
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Ключи и сертификаты
+*.key
+*.pem
+*.crt
+*.cert
+*.p12
+
+# ====================================
+# TELEGRAM СЕССИИ И ДАННЫЕ
+# ====================================
+
+# Сессии Telethon/Pyrogram
+*.session
+*.session-journal
+Session/
+sessions/
+
+# Файлы авторизации
+auth*
+login*
+credentials*
+
+# ====================================
+# ПАПКИ ПРОЕКТА
+# ====================================
+
+# Папка для загрузок
+downloads/
+uploads/
+temp/
+tmp/
+cache/
+
+# Логи
+logs/
+*.log
+log.txt
+
+# Базы данных
+*.db
+*.sqlite
+*.sqlite3
+database/
+
+# ====================================
+# ПАЙТОН
+# ====================================
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Виртуальные окружения
+venv/
+env/
+ENV/
+virtualenv/
+.env/
+.env.bak/
+
+# pip
+pip-delete-this-directory.txt
+pip-selfcheck.json
+
+# Распределенные пакеты
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+
+# ====================================
+# ОПЕРАЦИОННЫЕ СИСТЕМЫ
+# ====================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+# ====================================
+# IDE И РЕДАКТОРЫ
+# ====================================
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-*
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Atom
+.atom/
+.settings/
+.cache/
+
+# ====================================
+# ПЛАТЕЖИ И КРИПТО
+# ====================================
+
+# Файлы с платежными данными
+paid_users.txt
+payments.txt
+invoices.txt
+
+# ====================================
+# ВАШИ ФАЙЛЫ (ДОБАВЬТЕ СВОИ)
+# ====================================
+
+# Пример: 
+# my_secret_data.txt
+# private_keys/
+# backups/
+
+# ====================================
+# СИСТЕМНЫЕ ФАЙЛЫ
+# ====================================
+
+# Резервные копии
+*.bak
+*.backup
+*.old
+
+# Временные файлы
+*.tmp
+*.temp
