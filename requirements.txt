@@ -1,6 +1,7 @@
-# requirements.txt - СТАБИЛЬНЫЕ ВЕРСИИ
+# requirements.txt
 aiogram==3.0.0b7
 telethon==1.34.0
-aiohttp==3.9.5  # Последняя стабильная версия
+aiohttp==3.8.6  # ← ИЗМЕНИТЕ ЭТУ СТРОКУ
 python-dotenv==1.0.0
 requests==2.31.0
+pysocks==1.7.1
