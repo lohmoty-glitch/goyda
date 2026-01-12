@@ -1,7 +1,9 @@
 # requirements.txt
+# Используйте Python 3.10 (укажите в runtime.txt)
+
 aiogram==3.0.0b7
 telethon==1.34.0
-aiohttp==3.8.6  # ← ИЗМЕНИТЕ ЭТУ СТРОКУ
+aiohttp==3.8.6  # Совместимо с aiogram 3.0.0b7
 python-dotenv==1.0.0
 requests==2.31.0
 pysocks==1.7.1
