@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "goyda-bot"
+version = "0.1.0"
+description = "Telegram Bot"
+authors = ["Your Name <your@email.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiogram = "^2.25"
+telethon = "^1.34"
+aiohttp = "^3.9"
+python-dotenv = "^1.0"
+
+[tool.poetry.group.dev.dependencies]
+# dev-зависимости здесь
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
