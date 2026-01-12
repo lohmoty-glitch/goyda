@@ -1,3 +1,4 @@
+# render.yaml
 services:
   - type: web
     name: telegram-bot
@@ -7,3 +8,5 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.0
+    healthCheckPath: /
+    autoDeploy: true
