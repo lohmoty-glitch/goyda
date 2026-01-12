@@ -2,8 +2,10 @@
 # СЕКРЕТНЫЕ ФАЙЛЫ И КОНФИГУРАЦИИ
 # ====================================
 
-config.py
+# Основной конфиг с ключами
+config.py              # ← ДОБАВЬТЕ ЭТУ СТРОКУ
 config.local.py
+config.example.py
 
 # Файлы окружения
 .env
@@ -13,134 +15,41 @@ config.local.py
 .env.development
 .env.example
 
-# Ключи и сертификаты
-*.key
-*.pem
-*.crt
-*.cert
-*.p12
-
 # ====================================
 # TELEGRAM СЕССИИ И ДАННЫЕ
 # ====================================
 
-# Сессии Telethon/Pyrogram
-*.session
+# Сессии Telethon
+*.session              # ← ДОБАВЬТЕ ЭТУ СТРОКУ
 *.session-journal
-*.session-*
-Session/
+Session/               # ← ДОБАВЬТЕ ЭТУ СТРОКУ
 sessions/
-telethon/
-pyrogram/
-
-# Файлы авторизации
-auth*
-login*
-credentials*
-token*
 
 # ====================================
-# ФАЙЛЫ ПРИЛОЖЕНИЯ
+# ФАЙЛЫ ДАННЫХ БОТА
 # ====================================
 
-# Файлы данных (создаются во время работы)
-paid_users.txt
-banned_users.txt
-users.txt
-tracking_list.txt
-*.txt
-
-# Папки приложения
-downloads/
-uploads/
-temp/
-tmp/
-cache/
-logs/
-data/
-database/
-
-# Логи
-*.log
-log.txt
-debug.log
-error.log
-
-# Базы данных
-*.db
-*.sqlite
-*.sqlite3
-*.db-journal
+# Файлы данных (создаются во время работы бота)
+paid_users.txt         # ← ДОБАВЬТЕ ЭТУ СТРОКУ
+banned_users.txt       # ← ДОБАВЬТЕ ЭТУ СТРОКУ
+users.txt              # ← ДОБАВЬТЕ ЭТУ СТРОКУ
+tracking_list.txt      # ← ДОБАВЬТЕ ЭТУ СТРОКУ
 
 # ====================================
-# PYTHON
+# ПАЙТОН
 # ====================================
 
 # Кэш Python
-__pycache__/
-*.py[cod]
+__pycache__/           # ← ДОБАВЬТЕ ЭТУ СТРОКУ
+*.py[cod]              # ← ДОБАВЬТЕ ЭТУ СТРОКУ
 *$py.class
 *.so
 .Python
-.python-version
 
 # Виртуальные окружения
 venv/
 env/
-ENV/
-virtualenv/
-.env/
-.env.bak/
 .venv/
-
-# pip
-pip-delete-this-directory.txt
-pip-selfcheck.json
-get-pip.py
-
-# Распределенные пакеты
-*.egg
-*.egg-info/
-dist/
-build/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info
-pip-wheel-metadata/
-share/python-wheels/
-
-# Установки
-site-packages/
-installed-files.txt
-
-# Тесты
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
-# Jupyter
-.ipynb_checkpoints
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre
-.pyre/
 
 # ====================================
 # ОПЕРАЦИОННЫЕ СИСТЕМЫ
@@ -154,40 +63,11 @@ dmypy.json
 .Trashes
 ehthumbs.db
 Thumbs.db
-.AppleDouble
-.LSOverride
-Icon
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
 
 # Windows
 Desktop.ini
 $RECYCLE.BIN/
 *.lnk
-Thumbs.db
-*.stackdump
-[Dd]esktop.ini
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Linux
-*~
-.fuse_hidden*
-.directory
-.Trash-*
-.nfs*
 
 # ====================================
 # IDE И РЕДАКТОРЫ
@@ -195,55 +75,11 @@ Thumbs.db
 
 # VS Code
 .vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
 
 # PyCharm
 .idea/
 *.iml
 *.iws
-*.ipr
-.idea_modules/
-
-# Sublime Text
-*.sublime-*
-*.sublime-workspace
-sublime-text-*
-
-# Vim
-*.swp
-*.swo
-*~
-*.vim
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-
-# Atom
-.atom/
-.settings/
-.cache/
-.compile-cache/
-.atom-compile-cache-*
-*.cson
-*.coffee
-
-# ====================================
-# RENDER И ДЕПЛОЙ
-# ====================================
-
-# Render
-render.yaml
-render*.yaml
-.dockerignore
-Dockerfile
-docker-compose.yml
-docker-compose*.yml
 
 # ====================================
 # ПРОЧЕЕ
@@ -255,40 +91,7 @@ docker-compose*.yml
 *.bak
 *.backup
 *.old
-*.save
 
-# Архивы
-*.zip
-*.tar
-*.tar.gz
-*.tgz
-*.rar
-*.7z
-
-# Документы
-*.pdf
-*.doc
-*.docx
-*.xls
-*.xlsx
-*.ppt
-*.pptx
-
-# Медиа
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.mp3
-*.mp4
-*.avi
-*.mkv
-
-# ====================================
-# ВАШИ ФАЙЛЫ
-# ====================================
-
-# Добавьте сюда свои файлы, которые нужно игнорировать
-# secret_keys.txt
-# private/
-# backups/
+# Логи
+*.log
+logs/
