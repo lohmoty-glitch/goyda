@@ -2,8 +2,6 @@
 # СЕКРЕТНЫЕ ФАЙЛЫ И КОНФИГУРАЦИИ
 # ====================================
 
-
-# Основной конфиг с ключами
 config.py
 config.local.py
 
@@ -13,6 +11,7 @@ config.local.py
 .env.*.local
 .env.production
 .env.development
+.env.example
 
 # Ключи и сертификаты
 *.key
@@ -28,38 +27,53 @@ config.local.py
 # Сессии Telethon/Pyrogram
 *.session
 *.session-journal
+*.session-*
 Session/
 sessions/
+telethon/
+pyrogram/
 
 # Файлы авторизации
 auth*
 login*
 credentials*
+token*
 
 # ====================================
-# ПАПКИ ПРОЕКТА
+# ФАЙЛЫ ПРИЛОЖЕНИЯ
 # ====================================
 
-# Папка для загрузок
+# Файлы данных (создаются во время работы)
+paid_users.txt
+banned_users.txt
+users.txt
+tracking_list.txt
+*.txt
+
+# Папки приложения
 downloads/
 uploads/
 temp/
 tmp/
 cache/
+logs/
+data/
+database/
 
 # Логи
-logs/
 *.log
 log.txt
+debug.log
+error.log
 
 # Базы данных
 *.db
 *.sqlite
 *.sqlite3
-database/
+*.db-journal
 
 # ====================================
-# ПАЙТОН
+# PYTHON
 # ====================================
 
 # Кэш Python
@@ -68,6 +82,7 @@ __pycache__/
 *$py.class
 *.so
 .Python
+.python-version
 
 # Виртуальные окружения
 venv/
@@ -76,10 +91,12 @@ ENV/
 virtualenv/
 .env/
 .env.bak/
+.venv/
 
 # pip
 pip-delete-this-directory.txt
 pip-selfcheck.json
+get-pip.py
 
 # Распределенные пакеты
 *.egg
@@ -94,6 +111,36 @@ parts/
 sdist/
 var/
 wheels/
+*.egg-info
+pip-wheel-metadata/
+share/python-wheels/
+
+# Установки
+site-packages/
+installed-files.txt
+
+# Тесты
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
 
 # ====================================
 # ОПЕРАЦИОННЫЕ СИСТЕМЫ
@@ -107,14 +154,40 @@ wheels/
 .Trashes
 ehthumbs.db
 Thumbs.db
+.AppleDouble
+.LSOverride
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
 # Windows
 Desktop.ini
 $RECYCLE.BIN/
 *.lnk
+Thumbs.db
+*.stackdump
+[Dd]esktop.ini
+*.cab
+*.msi
+*.msm
+*.msp
 
 # Linux
 *~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
 
 # ====================================
 # IDE И РЕДАКТОРЫ
@@ -132,50 +205,90 @@ $RECYCLE.BIN/
 .idea/
 *.iml
 *.iws
+*.ipr
+.idea_modules/
 
 # Sublime Text
 *.sublime-*
 *.sublime-workspace
+sublime-text-*
 
 # Vim
 *.swp
 *.swo
 *~
+*.vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
 
 # Atom
 .atom/
 .settings/
 .cache/
+.compile-cache/
+.atom-compile-cache-*
+*.cson
+*.coffee
 
 # ====================================
-# ПЛАТЕЖИ И КРИПТО
+# RENDER И ДЕПЛОЙ
 # ====================================
 
-# Файлы с платежными данными
-paid_users.txt
-payments.txt
-invoices.txt
+# Render
+render.yaml
+render*.yaml
+.dockerignore
+Dockerfile
+docker-compose.yml
+docker-compose*.yml
 
 # ====================================
-# ВАШИ ФАЙЛЫ (ДОБАВЬТЕ СВОИ)
+# ПРОЧЕЕ
 # ====================================
-
-# Пример: 
-# my_secret_data.txt
-# private_keys/
-# backups/
-
-# ====================================
-# СИСТЕМНЫЕ ФАЙЛЫ
-# ====================================
-
-# Резервные копии
-*.bak
-*.backup
-*.old
 
 # Временные файлы
 *.tmp
-
 *.temp
+*.bak
+*.backup
+*.old
+*.save
 
+# Архивы
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Документы
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# Медиа
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp3
+*.mp4
+*.avi
+*.mkv
+
+# ====================================
+# ВАШИ ФАЙЛЫ
+# ====================================
+
+# Добавьте сюда свои файлы, которые нужно игнорировать
+# secret_keys.txt
+# private/
+# backups/
