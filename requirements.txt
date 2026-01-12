@@ -1,7 +1,6 @@
-# requirements.txt - СОВМЕСТИМАЯ ВЕРСИЯ
-aiogram==2.25.1
+# requirements.txt - СТАБИЛЬНЫЕ ВЕРСИИ
+aiogram==3.0.0b7
 telethon==1.34.0
-aiohttp==3.8.6  # Конкретная стабильная версия
+aiohttp==3.9.5  # Последняя стабильная версия
 python-dotenv==1.0.0
 requests==2.31.0
-pysocks==1.7.1  # Для работы прокси (если используете)
