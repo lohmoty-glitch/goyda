@@ -1,8 +1,8 @@
-api_id = '   '
-api_hash = '   '
-bot_token = 'token'
-admin_chat_ids = ['id']  # Добавьте сюда ID всех администраторов 'id', 'id' и тд
-CRYPTO_PAY_TOKEN = '332169:AABjHxC4snHVN4TYeIBIGLUlYdMZw3kmyPT' # тут замените на свой api от бота @send
+api_id = '30471099'
+api_hash = '5ca916cf23ca4b9c2bde4893a612c700'
+bot_token = '8532334445:AAHO8BlaKYkNWWJjvgQIxviniPko2dFj7EA'
+admin_chat_ids = ['6934998718','8304483534']  # Добавьте сюда ID всех администраторов 'id', 'id' и тд
+CRYPTO_PAY_TOKEN = '514857:AAw4bj36NyFlvyLg0242Nuva1Hn4RlFank4' # тут замените на свой api от бота @send
 
 senders = {
     "huyznaet06@gmail.com": "cyeb pnyi ctpj xxdx",
